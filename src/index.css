@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-yellow: #EAB308;
+  --color-brand-cyan: #06B6D4;
+  --color-mode-free: #EAB308;
+  --color-mode-win: #22C55E;
+  --color-mode-full: #06B6D4;
+  --font-sans: "Segoe UI", "Noto Sans JP", "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: #09090b;
+    color: #fafafa;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+
+  /* すりガラス効果（グラスモーフィズム）の共通パネルスタイル */
+  .glass-panel {
+    background-color: rgba(24, 24, 27, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  }
+
+  /* 目立つプライマリアクション用ボタン */
+  .glass-button-primary {
+    background-color: var(--color-brand-yellow);
+    color: #09090b;
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    transition: all 0.2s ease;
+  }
+
+  .glass-button-primary:hover {
+    background-color: #FACC15;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 15px -3px rgba(234, 179, 8, 0.2);
+  }
+
+  /* サブアクション用のすりガラスボタン */
+  .glass-button-secondary {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e4e4e7 !important;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    transition: all 0.2s ease;
+  }
+
+  .glass-button-secondary:hover,
+  .glass-button-secondary:active,
+  .glass-button-secondary:focus {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    color: #fafafa !important;
+  }
+
+  /* テキストの発光効果（抑えめ） */
+  .text-glow {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+  }
+}
+
+/* カスタムアニメーション定義 */
+@layer utilities {
+  @keyframes typewriter {
+    0% { opacity: 0; transform: translateY(5px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes camera-flash {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+  .animate-typewriter {
+    animation: typewriter 0.1s ease-out forwards;
+  }
+  
+  .animate-camera-flash {
+    animation: camera-flash 0.6s ease-out forwards;
+    animation-delay: 1.4s;
+  }
+}
