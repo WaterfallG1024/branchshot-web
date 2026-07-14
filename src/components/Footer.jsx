@@ -11,12 +11,6 @@ export default function Footer() {
         <p className="text-zinc-500 text-sm font-medium">
           &copy; {new Date().getFullYear()} WaterfallG1024. All rights reserved.
         </p>
-        
-        <div className="flex gap-8 text-lg font-medium text-gray-300">
-          {/* <a href="#" className="hover:text-white transition-colors">利用規約</a>
-          <a href="#" className="hover:text-white transition-colors">プライバシーポリシー</a> */}
-          {/* <a href="#" className="hover:text-white transition-colors">GitHub</a> */}
-        </div>
       </div>
     </footer>
   );

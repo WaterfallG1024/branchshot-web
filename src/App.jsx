@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Hero from './components/Hero'
 import Features from './components/Features'
+import Requirements from './components/Requirements'
 import Guide from './components/Guide'
 import FAQ from './components/FAQ'
 import Footer from './components/Footer'
@@ -21,6 +22,9 @@ function App() {
         
         {/* キラーフィーチャー（3大特徴） */}
         <Features />
+        
+        {/* 動作環境 */}
+        <Requirements />
         
         {/* 使い方ガイド */}
         <Guide />

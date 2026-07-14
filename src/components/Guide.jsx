@@ -28,7 +28,7 @@ export default function Guide() {
 
       <div className="space-y-20">
         
-        {/* Step 1 */}
+        {/* ステップ 1 */}
         <div className="glass-panel p-8 flex flex-col lg:flex-row gap-12 items-center">
           <div className="flex-1">
             <div className="flex items-center gap-6 mb-8">
@@ -53,7 +53,7 @@ export default function Guide() {
           </div>
         </div>
 
-        {/* Step 2 */}
+        {/* ステップ 2 */}
         <div className="glass-panel p-8 flex flex-col lg:flex-row-reverse gap-12 items-center">
           <div className="flex-1">
             <div className="flex items-center gap-6 mb-8">
@@ -78,7 +78,7 @@ export default function Guide() {
           </div>
         </div>
 
-        {/* Step 3 */}
+        {/* ステップ 3 */}
         <div className="glass-panel p-8 flex flex-col xl:flex-row gap-12 items-start">
           <div className="flex-1 w-full">
             <div className="flex items-center gap-6 mb-8">
@@ -128,7 +128,7 @@ export default function Guide() {
           </div>
         </div>
 
-        {/* Step 4 */}
+        {/* ステップ 4 */}
         <div className="glass-panel p-8 flex flex-col lg:flex-row-reverse gap-12 items-center">
           <div className="flex-1">
             <div className="flex items-center gap-6 mb-8">
